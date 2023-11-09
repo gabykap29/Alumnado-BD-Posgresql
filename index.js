@@ -6,12 +6,10 @@ import {    Institucion,
     Departamento,
     Ambito,
     Sector,} from  './models/asociaciones/asociaciones.js';
+import router from './routes/router.js';
 const app  = express();
-
-
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+app.use(express.json());
+app.use(router);
 
 app.listen(3000, () => {
     console.log('Example app listening on port 3000!');

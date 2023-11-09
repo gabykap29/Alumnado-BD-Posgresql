@@ -1,17 +1,18 @@
 import {sequelize, DataTypes} from '../database/db.js';
 
 export const InstitucionNivel = sequelize.define('InstitucionNivel',{
-    id_institucion_nivel:{
+    idNivel:{
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    institucion_id:{
-        type: DataTypes.INTEGER
-    },
     nivel_educativo_id:{
         type: DataTypes.INTEGER
-}
+    },
+    institucion_id:{
+        type: DataTypes.INTEGER,
+        allowNull:false
+    },
 },{
     paranoid:false,
     tableName:'InstitucionNivel',

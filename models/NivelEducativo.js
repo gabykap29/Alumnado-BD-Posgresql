@@ -9,6 +9,10 @@ export const NivelEducativo = sequelize.define('NivelEducativo',{
     nombre_nivel:{
         type: DataTypes.STRING,
     },
+    modalidad_id:{
+        type:DataTypes.INTEGER,
+        allowNull:true,
+    },
 },{
     paranoid:false,
     tableName:'NivelEducativo',

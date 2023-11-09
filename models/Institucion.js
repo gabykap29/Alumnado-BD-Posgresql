@@ -9,26 +9,28 @@ export const Institucion = sequelize.define('Institucion',{
     nombre_institucion:{
         type: DataTypes.STRING,
     },
+    domicilio:{
+        type: DataTypes.STRING,
+        allowNull:true,
+    },
     telefono:{
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull:true,
     },
     mail:{
-        type: DataTypes.STRING
-    },
-    modalidad_id:{
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING,
+        allowNull:true,
     },
     localidad_id:{
         type: DataTypes.INTEGER
     },
-    nivel_educativo_id:{
-        type: DataTypes.INTEGER
-    },
-    domicilio_id:{
-        type: DataTypes.INTEGER,
-    },
     ambito_id:{
         type: DataTypes.INTEGER,
-        allowNull:false,
+        allowNull:true,
     },
+},{
+    paranoid:false,
+    tableName:'Institucion',
+    modelName:'Institucion',
+    timestamps:false
 });

@@ -13,10 +13,11 @@ export const Localidad = sequelize.define('Localidad',{
         type: DataTypes.INTEGER
     },
     cod_postal:{
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
     },
 },{
     sequelize,
+    timestamps:false,
     paranoid:false,
     tableName:'Localidad',
     modelName:'Localidad',

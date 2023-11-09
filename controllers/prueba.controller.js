@@ -7,3 +7,23 @@ import {    Institucion,
     Sector,} from  '../models/asociaciones/asociaciones.js';
 
 
+const localidadDepartamento = async(req,res)=>{
+    try {
+        const Localidades = await Localidad.findAll(
+            {
+                include:[
+                    {
+                        model:Departamento,
+                        as:'localidad'
+                    }
+                ]
+            }
+        );
+        return res.json(Localidades);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+export {localidadDepartamento};

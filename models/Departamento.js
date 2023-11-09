@@ -4,12 +4,13 @@ export const Departamento = sequelize.define('Departamento',{
     id_departamento:{
         type: DataTypes.INTEGER,
         primaryKey: true,
-        autoIncrement: false
+        autoIncrement:false,
     },
     name_departamento:{
         type: DataTypes.STRING,
     },
 },{
+    timestamps:false,
     paranoid:false,
     tableName:'Departamento',
     modelName:'Departamento'
